@@ -1,4 +1,5 @@
 # SunCalc
+![AppVeyor](https://img.shields.io/appveyor/build/nikolajjensen/SunCalc) ![AppVeyor tests](https://img.shields.io/appveyor/tests/nikolajjensen/SunCalc)
 
 A Swift Package for calculation of Sun and Moon positions and phases.
 

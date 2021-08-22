@@ -1,0 +1,10 @@
+os:
+  - osx
+language: swift
+osx_image: xcode13
+env:
+  - PROJECT_NAME=SunCalc
+install: (cd $PROJECT_NAME && swift package update)
+script:
+  - (cd $PROJECT_NAME && swift build)
+  - (cd $PROJECT_NAME && swift test)
