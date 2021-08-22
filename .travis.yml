@@ -2,7 +2,6 @@ os:
   - osx
 language: swift
 osx_image: xcode13
-install: (swift package update)
 script:
-  - (swift build)
-  - (swift test)
+  - swift build
+  - swift test
