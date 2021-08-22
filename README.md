@@ -36,15 +36,15 @@ if let rise = result.rise, let set = result.set {
 }
 ```
 
-For more examples, please see the [ExamplesTest.swift](#) file.
+For more examples, please see the [ExamplesTest.swift](https://github.com/nikolajjensen/SunCalc/blob/main/Tests/SunCalcTests/ExamplesTest.swift) file.
 
 ## Usage
 For every model, there are several parameters that can be set and used in calculation. These parameters are defined in these three files:
-* [GenericParameter.swift]()
-* [LocationParameter.swift]()
-* [TimeParameter.swift]()
-* [Twilight.swift]
-* [Phase.swift]
+* [GenericParameter.swift](https://github.com/nikolajjensen/SunCalc/blob/main/Sources/SunCalc/Param/GenericParameter.swift)
+* [LocationParameter.swift](https://github.com/nikolajjensen/SunCalc/blob/main/Sources/SunCalc/Param/LocationParameter.swift)
+* [TimeParameter.swift](https://github.com/nikolajjensen/SunCalc/blob/main/Sources/SunCalc/Param/TimeParameter.swift)
+* [Twilight.swift](https://github.com/nikolajjensen/SunCalc/blob/main/Sources/SunCalc/Utils/Twilight.swift)
+* [Phase.swift](https://github.com/nikolajjensen/SunCalc/blob/main/Sources/SunCalc/Utils/Phase.swift)
 
 
 ### GenericParameter
@@ -88,9 +88,9 @@ For every model, there are several parameters that can be set and used in calcul
 **NOTE**: The accuracy of the results is decreasing for dates that are far in the future, or far in the past
 
 ### Twilight
-By default, [`SunTimes.swift`](#) calculates the time of the visual sunrise and sunset. This means that  the `rise` property contains the DateTime when the Sun just starts to rise above the horizon, and `set` contains the DateTime when the Sun just disappeared from the horizon. [Atmospheric refraction](https://en.wikipedia.org/wiki/Atmospheric_refraction) is taken into account.
+By default, [`SunTimes.swift`](https://github.com/nikolajjensen/SunCalc/blob/main/Sources/SunCalc/SunTimes.swift) calculates the time of the visual sunrise and sunset. This means that  the `rise` property contains the DateTime when the Sun just starts to rise above the horizon, and `set` contains the DateTime when the Sun just disappeared from the horizon. [Atmospheric refraction](https://en.wikipedia.org/wiki/Atmospheric_refraction) is taken into account.
 
-There are other interesting [twilight](https://en.wikipedia.org/wiki/Twilight) angles available. You can set them via the `twilight()` parameter, by using one of the [`Twilight.swift`](#) constants:
+There are other interesting [twilight](https://en.wikipedia.org/wiki/Twilight) angles available. You can set them via the `twilight()` parameter, by using one of the [`Twilight.swift`](https://github.com/nikolajjensen/SunCalc/blob/main/Sources/SunCalc/Utils/Twilight.swift) constants:
 
 | Constant       | Description | Angle of the Sun | Topocentric |
 | -------------- | ----------- | ----------------:|:-----------:|
@@ -111,7 +111,7 @@ Alternatively you can also pass any other angle (in degrees) to `twilight()`.
 **NOTE**: Only `visual` and `visualLower` are topocentric. They refer to the visual edge of the Sun, take account of the `height` parameter, and compensate for atmospheric refraction. All other twilights are geocentric and heliocentric. The `height` parameter is then ignored, and atmospheric refraction is not compensated.
 
 ### Phase
-By default, [`MoonPhase.swift`](#) calculates the date of the next new moon. If you want to compute the date of another phase, you can set it via the `phase()` parameter, by using one of the [`Phase.swift`](#) constants:
+By default, [`MoonPhase.swift`](https://github.com/nikolajjensen/SunCalc/blob/main/Sources/SunCalc/MoonPhase.swift) calculates the date of the next new moon. If you want to compute the date of another phase, you can set it via the `phase()` parameter, by using one of the [`Phase.swift`](https://github.com/nikolajjensen/SunCalc/blob/main/Sources/SunCalc/Utils/Phase.swift) constants:
 
 | Constant          | Description | Angle |
 | ----------------- | ----------- | -----:|
