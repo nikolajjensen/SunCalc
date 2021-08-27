@@ -24,7 +24,7 @@ This library consists of several models for calculation:
 All models are invoked using the same pattern:
 ```swift
 let location = // Coordinates (see LocationParameter.swift)
-let dateTime = // DateTime object or timestamp (see TimeParameter.swift)
+let dateTime = // DateTime object or Swift timestamp (see TimeParameter.swift)
 
 let result = try SunTimes.compute()
                             .on(dateTime)
