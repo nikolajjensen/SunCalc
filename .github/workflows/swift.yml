@@ -9,11 +9,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - uses: fwal/setup-swift@v1.7.0
-      with:
-        swift-version: "5.5"
-    - name: Xcode version
-      run: xcodebuild -version
     - name: Swift version
       run: swift --version
     - name: Build
