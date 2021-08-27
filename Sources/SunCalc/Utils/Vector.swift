@@ -220,7 +220,7 @@ struct Vector: Equatable, CustomStringConvertible {
         
         /// Returns the azimuthal angle (φ) in radians.
         mutating func getPhi() -> Double {
-            guard let φ = φ else {
+            guard let φUnwrapped = φ else {
                 if ExtendedMath.isZero(x) && ExtendedMath.isZero(y) {
                     φ = 0.0
                 } else {
@@ -234,12 +234,12 @@ struct Vector: Equatable, CustomStringConvertible {
                 return φ!
             }
             
-            return φ
+            return φUnwrapped
         }
         
         /// Returns the polar angle (θ) in radians.
         mutating func getTheta() -> Double {
-            guard let θ = θ else {
+            guard let θUnwrapped = θ else {
                 let pSqr = x * x + y * y
                 
                 if ExtendedMath.isZero(z) && ExtendedMath.isZero(pSqr) {
@@ -251,18 +251,18 @@ struct Vector: Equatable, CustomStringConvertible {
                 return θ!
             }
             
-            return θ
+            return θUnwrapped
         }
         
         /// Returns the radial distance.
         mutating func getR() -> Double {
-            guard let r = r else {
+            guard let rUnwrapped = r else {
                 r = sqrt(x * x + y * y + z * z)
                 
                 return r!
             }
             
-            return r
+            return rUnwrapped
         }
     }
 }

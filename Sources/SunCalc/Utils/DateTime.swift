@@ -145,11 +145,11 @@ public struct DateTime: CustomStringConvertible {
         
         let dayOfYear = calendar.ordinality(of: .day, in: .year, for: date)
         
-        guard let dayOfYear = dayOfYear else {
+        guard let dayOfYearUnwrapped = dayOfYear else {
             throw SunCalcError.dateManipulationError("Could not determine day of year.")
         }
         
-        return dayOfYear
+        return dayOfYearUnwrapped
     }
     
     /// Returns the year of this DateTime.
