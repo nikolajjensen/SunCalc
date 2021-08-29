@@ -24,6 +24,7 @@
 //
 
 import Foundation
+import CoreLocation
 
 /// Location-based parameters used for various calculations.
 public protocol LocationParameter {
@@ -72,8 +73,15 @@ public extension LocationParameter {
     }
     
     /// Sets the location of calculation to the given coordinates.
-    /// - Parameters:
-    ///   - coords: The latitude and longitude in an array, in degrees. There must be two elements of type Double in this array.
+    /// - Parameter coords: A CLLocationCoordinate2D containing latitude and longitude components.
+    /// - Throws: If the latitude or longitude could not be set.
+    /// - Returns: The Builder.
+    func at(_ coords: CLLocationCoordinate2D) throws -> T {
+        return try at(coords.latitude, coords.longitude)
+    }
+    
+    /// Sets the location of calculation to the given coordinates.
+    /// - Parameter coords: The latitude and longitude in an array, in degrees. There must be two elements of type Double in this array.
     /// - Throws: If the latitude, longitude, or height could not be set, OR if the input is invalid.
     /// - Returns: The Builder.
     func at(_ coords: [Double]) throws -> T {
