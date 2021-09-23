@@ -3,7 +3,7 @@
 
 A Swift Package for calculation of Sun and Moon positions and phases.
 
-This project is based on the [Java version](https://github.com/shred/commons-suncalc) written by Richard "Shred" Körber, and shared under the [Apahce License 2.0](http://www.apache.org/licenses/LICENSE-2.0).
+This project is based on the [Java version](https://github.com/shred/commons-suncalc) written by Richard "Shred" Körber, and shared under the [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0).
 
 ## Accuracy
 Astronomical calculations are far more complex than throwing a few numbers into an obscure formula and then getting a fully accurate result. There is always a tradeoff between accuracy and computing time.
@@ -139,4 +139,4 @@ All original formulas and calculations are implemented by Richard "Shred" Körbe
 * Found a bug? Please file a bug report.
 
 ## License
-_SunCalc_ is open source software. The source code is distributed under the terms of the [Apahce License 2.0](http://www.apache.org/licenses/LICENSE-2.0).
+_SunCalc_ is open source software. The source code is distributed under the terms of the [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0).
